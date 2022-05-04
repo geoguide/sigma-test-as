@@ -124,7 +124,7 @@ function App() {
           if (!row[measureNames[j]] && row[measureNames[j]] !== 0) {
             row[measureNames[j]] = 0
           }
-          console.log({ measureNamesj: measureNames[j], sigmaDataMeasuresji: sigmaData[measures[j]][i] })
+          console.log({ numMeasures, measureNamesj: measureNames[j], sigmaDataMeasuresji: sigmaData[measures[j]][i] })
           console.log({ sigmaData })
           if (sigmaData[dimension][i] === dimensions[i]) {
             row[measureNames[j]] += sigmaData[measures[j]][i];
