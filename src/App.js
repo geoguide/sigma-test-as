@@ -114,18 +114,13 @@ function App() {
 
     if (dimension && measures && Object.keys(sigmaData).length && sigmaData) {
       const dimensions = [...new Set(sigmaData[dimension])]
-      console.log({ sigmaDataDimension: sigmaData[dimension], dimensions })
       for (let i = 0; i < dimensions.length; i++) {
         let row = {};
-        console.log({ dimensionName, dimension, i: sigmaData[dimension][i] })
         row[dimensionName] = dimensions[i];
 
         for (let j = 0; j < numMeasures; j++) {
-          console.log({ numMeasures, measureNamesj: measureNames[j], sigmaDataMeasuresji: sigmaData[measures[j]][i] })
-          console.log({ sigmaData })
           for (let k = 0; k < sigmaData[measures[j]].length; k++) {
             if (sigmaData[dimension][k] === dimensions[i]) {
-              console.log(row[measureNames[j]], sigmaData[measures[j]][k], j, k, measureNames[j].length)
               if (!row[measureNames[j]]) {
                 row[measureNames[j]] = 0;
               }
