@@ -120,15 +120,15 @@ function App() {
         console.log({ dimensionName, dimension, i: sigmaData[dimension][i] })
         row[dimensionName] = dimensions[i];
 
-        for (let j = 0; j < sigmaData[measures].length; j++) {
-          if (!row[measureNames[j]] && row[measureNames[j]] !== 0) {
-            row[measureNames[j]] = 0
-          }
+        for (let j = 0; j < numMeasures; j++) {
           console.log({ numMeasures, measureNamesj: measureNames[j], sigmaDataMeasuresji: sigmaData[measures[j]][i] })
           console.log({ sigmaData })
-          if (sigmaData[dimension][i] === dimensions[i]) {
-            row[measureNames[j]] += sigmaData[measures[j]][i];
+          for (let k = 0; k < measureNames[j].length; k++) {
+            if (sigmaData[dimension][k] === dimensions[i]) {
+              row[measureNames[j]] += sigmaData[measures[j]][k];
+            }
           }
+
 
         }
         data.push(row);
