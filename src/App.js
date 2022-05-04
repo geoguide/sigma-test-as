@@ -114,7 +114,7 @@ function App() {
 
     if (dimension && measures && Object.keys(sigmaData).length && sigmaData) {
       const dimensions = [...new Set(sigmaData[dimension])]
-      console.log({ sigmaDataDimension: sigmaData[dimension] })
+      console.log({ sigmaDataDimension: sigmaData[dimension], dimensions })
       for (let i = 0; i < dimensions.length; i++) {
         let row = {};
         console.log({ dimensionName, dimension, i: sigmaData[dimension][i] })
