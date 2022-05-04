@@ -118,7 +118,7 @@ function App() {
       for (let i = 0; i < dimensions.length; i++) {
         let row = {};
         console.log({ dimensionName, dimension, i: sigmaData[dimension][i] })
-        row[dimensionName] = sigmaData[dimension][i];
+        row[dimensionName] = dimensions[i];
         for (let j = 0; j < numMeasures; j++) {
           console.log({ measureNamesj: measureNames[j], sigmaDataMeasuresji: sigmaData[measures[j]][i] })
           row[measureNames[j]] = sigmaData[measures[j]][i];
