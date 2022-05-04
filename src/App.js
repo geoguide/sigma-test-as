@@ -119,10 +119,17 @@ function App() {
         let row = {};
         console.log({ dimensionName, dimension, i: sigmaData[dimension][i] })
         row[dimensionName] = dimensions[i];
+
         for (let j = 0; j < numMeasures; j++) {
+          if (!row[measureNames[j]] && row[measureNames[j]] !=== 0) {
+            row[measureNames[j]] = 0
+          }
           console.log({ measureNamesj: measureNames[j], sigmaDataMeasuresji: sigmaData[measures[j]][i] })
           console.log({ sigmaData })
-          row[measureNames[j]] = sigmaData[measures[j]][i];
+          if (sigmaData[dimension][i] === dimensions[i]) {
+            row[measureNames[j]] += sigmaData[measures[j]][i];
+          }
+
         }
         data.push(row);
       }
