@@ -125,11 +125,11 @@ function App() {
           console.log({ sigmaData })
           for (let k = 0; k < measureNames[j].length; k++) {
             if (sigmaData[dimension][k] === dimensions[i]) {
+              console.log(row[measureNames[j]], sigmaData[measures[j]][k], j, k, measureNames[j].length)
               if (row[measureNames[j]]) {
                 row[measureNames[j]] = 0;
               }
               row[measureNames[j]] += sigmaData[measures[j]][k];
-              console.log(row[measureNames[j]], sigmaData[measures[j]][k], j, k, measureNames[j].length)
             }
           }
 
