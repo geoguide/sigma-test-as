@@ -81,9 +81,9 @@ function RenderBarChart(props) {
 function App() {
   const config = useConfig();
 
-  // Sigma represents their data in a columnar format. Given a data source, useElementData will return 
-  // any columns specified in the side panel with their respective data. 
-  // The format is { [columnId: string]: any[] } 
+  // Sigma represents their data in a columnar format. Given a data source, useElementData will return
+  // any columns specified in the side panel with their respective data.
+  // The format is { [columnId: string]: any[] }
   // For more details / examples on the API, refer to the documentation.
   const sigmaData = useElementData(config.source);
 
@@ -113,7 +113,8 @@ function App() {
     const data = [];
 
     if (dimension && measures && Object.keys(sigmaData).length && sigmaData) {
-      for (let i = 0; i < sigmaData[dimension].length; i++) {
+      const dimensions = [...new Set(sigmaData[dimension])]
+      for (let i = 0; i < dimensions.length; i++) {
         let row = {};
         row[dimensionName] = sigmaData[dimension][i];
         for (let j = 0; j < numMeasures; j++) {
