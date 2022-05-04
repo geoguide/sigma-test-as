@@ -126,6 +126,7 @@ function App() {
           for (let k = 0; k < measureNames[j].length; k++) {
             if (sigmaData[dimension][k] === dimensions[i]) {
               row[measureNames[j]] += sigmaData[measures[j]][k];
+              console.log(row[measureNames[j]])
             }
           }
 
