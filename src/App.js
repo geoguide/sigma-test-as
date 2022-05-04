@@ -129,7 +129,7 @@ function App() {
                 row[measureNames[j]] = 0;
               }
               row[measureNames[j]] += sigmaData[measures[j]][k];
-              console.log(row[measureNames[j]])
+              console.log(row[measureNames[j]], sigmaData[measures[j]][k], j, k, measureNames[j].length)
             }
           }
 
