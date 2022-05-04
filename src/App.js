@@ -120,7 +120,7 @@ function App() {
         console.log({ dimensionName, dimension, i: sigmaData[dimension][i] })
         row[dimensionName] = dimensions[i];
 
-        for (let j = 0; j < numMeasures; j++) {
+        for (let j = 0; j < sigmaData[measures]; j++) {
           if (!row[measureNames[j]] && row[measureNames[j]] !== 0) {
             row[measureNames[j]] = 0
           }
