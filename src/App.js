@@ -114,10 +114,13 @@ function App() {
 
     if (dimension && measures && Object.keys(sigmaData).length && sigmaData) {
       const dimensions = [...new Set(sigmaData[dimension])]
+      console.log({ sigmaDataDimension: sigmaData[dimension] })
       for (let i = 0; i < dimensions.length; i++) {
         let row = {};
+        console.log({ dimensionName, dimension, i: sigmaData[dimension][i] })
         row[dimensionName] = sigmaData[dimension][i];
         for (let j = 0; j < numMeasures; j++) {
+          console.log({ measureNamesj: measureNames[j], sigmaDataMeasuresji: sigmaData[measures[j]][i] })
           row[measureNames[j]] = sigmaData[measures[j]][i];
         }
         data.push(row);
