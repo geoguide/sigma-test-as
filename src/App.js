@@ -121,6 +121,7 @@ function App() {
         row[dimensionName] = dimensions[i];
         for (let j = 0; j < numMeasures; j++) {
           console.log({ measureNamesj: measureNames[j], sigmaDataMeasuresji: sigmaData[measures[j]][i] })
+          console.log({ sigmaData })
           row[measureNames[j]] = sigmaData[measures[j]][i];
         }
         data.push(row);
